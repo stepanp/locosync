@@ -1,6 +1,6 @@
 {
 	"points" : "Вы набрали %s очков",
 	"name" : "Project",
-	"name_android" : "Project Android",
-	"name_ios" : "Project iOS"
+	"name__android" : "Project Android",
+	"name__ios" : "Project iOS"
 }
