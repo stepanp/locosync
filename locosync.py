@@ -64,7 +64,7 @@ def filter_platform(strings_json, platform, exclude_platforms):
 
     def is_excluded(key):
         for exclude in exclude_platforms:
-            if key.endswith("_" + exclude):
+            if key.endswith("__" + exclude):
                 return True
 
     for key, value in strings_json.iteritems():
@@ -72,8 +72,8 @@ def filter_platform(strings_json, platform, exclude_platforms):
         if is_excluded(key):
             continue
 
-        if key.endswith("_" + platform):
-            strings[key[:-len("_" + platform)]] = escape_symbols(value)
+        if key.endswith("__" + platform):
+            strings[key[:-len("__" + platform)]] = escape_symbols(value)
             continue
 
         if key in strings:
