@@ -39,9 +39,15 @@ def parse_config(path, source_dir):
         json_config = json.load(data)
 
     return {
-        "ios_path" : os.path.abspath(source_dir + "/" + json_config["ios_path"]) if "ios_path" in json_config else None,
-        "android_path" : os.path.abspath(source_dir + "/" + json_config["android_path"]) if "android_path" in json_config else None,
+        "ios_path" : universal_path(source_dir, json_config["ios_path"]) if "ios_path" in json_config else None,
+        "android_path" : universal_path(source_dir, json_config["android_path"]) if "android_path" in json_config else None,
     }
+
+def universal_path(source_dir, path):
+    if os.path.isabs(path):
+        return path
+    else:
+        return os.path.abspath(os.path.join(source_dir, path))
 
 def process_languages(platform, languages, source_dir, output_path):
     transform = globals()["transform_" + platform]
