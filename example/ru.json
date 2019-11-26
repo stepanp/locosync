@@ -1,6 +1,7 @@
 {
+	"score" : "Счет",
 	"points" : "Вы набрали %s очков",
-	"name" : "Project",
-	"name__android" : "Project Android",
-	"name__ios" : "Project iOS"
+	
+	"string__android" : "Эта строка попадет только в Android", 
+	"string__ios" : "Эта строка попадет только в iOS"
 }

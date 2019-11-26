@@ -1,6 +1,7 @@
 {
+	"score" : "Score",
 	"points" : "You got %s points",
-	"name" : "Project",
-	"name__android" : "Project Android",
-	"name__ios" : "Project iOS"
+	
+	"string__android" : "This string will be included only in Android", 
+	"string__ios" : "This string will be included only in iOS"
 }
